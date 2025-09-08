@@ -1,5 +1,5 @@
 // !SearchBar component that fetches stock suggestions based on user input
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { fetchStockData } from "@/services/stock";
 import { StockSearch } from "@/types/stock";
 
@@ -33,7 +33,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSelectStock }) => {
                 );
                 setSuggestions(data);
             } catch (error) {
-                setError("Failed to fetch stock data");
+                setError("Failed to fetch stock data" + (error instanceof Error ? `: ${error.message}` : ""));
             } finally {
                 setLoading(false);
             }
@@ -59,6 +59,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSelectStock }) => {
             />
             {showSuggestions && suggestions.length > 0 && (
                 <ul className="absolute bg-white border border-gray-300 text-black rounded-md mt-1 w-full z-50 max-h-60 overflow-y-auto">
+                    {loading && <li className="p-2">Loading...</li>}
+                    {error && <li className="p-2 text-red-500">{error}</li>}
                     {suggestions.map((stock) => (
                         <li
                             key={stock.symbol}

@@ -27,7 +27,7 @@ export default function StockDetailPage() {
                     setPrices(fetchedPrices);
                 }
             } catch (e) {
-                setError("Failed to fetch stock prices.");
+                setError("Failed to fetch stock prices." + (e instanceof Error ? `: ${e.message}` : ""));
             } finally {
                 setLoading(false);
             }

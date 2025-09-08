@@ -117,6 +117,7 @@ const StockGraph: React.FC<StockGraphProps> = ({ data, showTooltip = true }) => 
 
     // Custom tooltip to show more stock information
     const CustomTooltip = ({ active, payload, label }: any) => {
+        console.log("Tooltip payload:", payload, label);
         if (active && payload && payload.length) {
             const data = payload[0].payload;
             return (
@@ -213,6 +214,7 @@ const StockGraph: React.FC<StockGraphProps> = ({ data, showTooltip = true }) => 
                             dot={{ fill: isPositiveTrend ? "#10b981" : "#ef4444", strokeWidth: 2, r: 4 }}
                             activeDot={{ r: 6, stroke: isPositiveTrend ? "#10b981" : "#ef4444", strokeWidth: 2 }}
                         />
+                        <Legend verticalAlign="top" height={36} />
                     </AreaChart>
                 </ResponsiveContainer>
             </div>

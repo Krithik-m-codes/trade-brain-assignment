@@ -36,7 +36,7 @@ const FavoritesPage = () => {
                 setStockData(initialStockData);
             }
         } catch (err) {
-            setError("Failed to load favorites from storage");
+            setError("Failed to load favorites from storage" + (err instanceof Error ? `: ${err.message}` : ""));
         } finally {
             setLoading(false);
         }

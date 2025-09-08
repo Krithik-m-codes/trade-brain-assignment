@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import NavLinks from './NavLinks';
 import { useRouter } from 'next/navigation';
 import SearchBar from '../app/SearchBar';
+import Link from 'next/link';
+import Image from 'next/image';
 
 function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,9 +18,9 @@ function Header() {
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <nav className="flex items-center justify-between h-16 lg:h-20">
                     <div className="flex-shrink-0">
-                        <a href="/" title="Logo" className="flex">
-                            <img className="w-auto h-8 lg:h-10" src="/logo.jpg" alt="Logo" />
-                        </a>
+                        <Link href="/" title="Logo" className="flex">
+                            <Image className="w-auto h-8 lg:h-10" width={36} height={36} src="/logo.jpg" alt="Logo" />
+                        </Link>
                     </div>
 
                     <SearchBar onSelectStock={(stock) => router.push(`/stock/${stock.symbol}`)} />

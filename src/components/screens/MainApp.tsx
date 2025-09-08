@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import {
     Carousel,
     CarouselContent,
@@ -69,10 +70,12 @@ function App() {
                                 <CarouselItem key={index}>
                                     <div className="p-1">
                                         <div className="relative overflow-hidden rounded-xl">
-                                            <img
+                                            <Image
                                                 className="w-full h-[500px] object-cover hover:scale-105"
                                                 src={url}
                                                 alt={`Stock market slide ${index + 1}`}
+                                                width={800}
+                                                height={500}
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
