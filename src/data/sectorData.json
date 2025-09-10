@@ -1,0 +1,424 @@
+{
+    "sectorName": [
+        {
+            "sect_code": "All Stocks",
+            "sect_name": "All Stocks",
+            "slug": "all-stocks"
+        },
+        {
+            "sect_code": "00000001",
+            "sect_name": "Agro Chemicals",
+            "slug": "agro-chemicals"
+        },
+        {
+            "sect_code": "00000002",
+            "sect_name": "Air Transport Service",
+            "slug": "air-transport-service"
+        },
+        {
+            "sect_code": "00000003",
+            "sect_name": "Alcoholic Beverages",
+            "slug": "alcoholic-beverages"
+        },
+        {
+            "sect_code": "00000004",
+            "sect_name": "Auto Ancillaries",
+            "slug": "auto-ancillaries"
+        },
+        {
+            "sect_code": "00000005",
+            "sect_name": "Automobile",
+            "slug": "automobile"
+        },
+        {
+            "sect_code": "00000006",
+            "sect_name": "Banks",
+            "slug": "banks"
+        },
+        {
+            "sect_code": "00000007",
+            "sect_name": "Cables",
+            "slug": "cables"
+        },
+        {
+            "sect_code": "00000008",
+            "sect_name": "Capital Goods - Electrical Equipment",
+            "slug": "capital-goods-electrical-equipment"
+        },
+        {
+            "sect_code": "00000009",
+            "sect_name": "Capital Goods-Non Electrical Equipment",
+            "slug": "capital-goods-non-electrical-equipment"
+        },
+        {
+            "sect_code": "00000010",
+            "sect_name": "Castings, Forgings & Fastners",
+            "slug": "castings-forgings-fastners"
+        },
+        {
+            "sect_code": "00000011",
+            "sect_name": "Cement",
+            "slug": "cement"
+        },
+        {
+            "sect_code": "00000012",
+            "sect_name": "Cement - Products",
+            "slug": "cement-products"
+        },
+        {
+            "sect_code": "00000013",
+            "sect_name": "Ceramic Products",
+            "slug": "ceramic-products"
+        },
+        {
+            "sect_code": "00000014",
+            "sect_name": "Chemicals",
+            "slug": "chemicals"
+        },
+        {
+            "sect_code": "00000015",
+            "sect_name": "Computer Education",
+            "slug": "computer-education"
+        },
+        {
+            "sect_code": "00000016",
+            "sect_name": "Construction",
+            "slug": "construction"
+        },
+        {
+            "sect_code": "00000017",
+            "sect_name": "Consumer Durables",
+            "slug": "consumer-durables"
+        },
+        {
+            "sect_code": "00000018",
+            "sect_name": "Credit Rating Agencies",
+            "slug": "credit-rating-agencies"
+        },
+        {
+            "sect_code": "00000019",
+            "sect_name": "Crude Oil & Natural Gas",
+            "slug": "crude-oil-natural-gas"
+        },
+        {
+            "sect_code": "00000020",
+            "sect_name": "Diamond, Gems and Jewellery",
+            "slug": "diamond-gems-and-jewellery"
+        },
+        {
+            "sect_code": "00000021",
+            "sect_name": "Diversified",
+            "slug": "diversified"
+        },
+        {
+            "sect_code": "00000022",
+            "sect_name": "Dry cells",
+            "slug": "dry-cells"
+        },
+        {
+            "sect_code": "00000023",
+            "sect_name": "Edible Oil",
+            "slug": "edible-oil"
+        },
+        {
+            "sect_code": "00000024",
+            "sect_name": "Entertainment",
+            "slug": "entertainment"
+        },
+        {
+            "sect_code": "00000025",
+            "sect_name": "Fertilizers",
+            "slug": "fertilizers"
+        },
+        {
+            "sect_code": "00000026",
+            "sect_name": "Finance",
+            "slug": "finance"
+        },
+        {
+            "sect_code": "00000027",
+            "sect_name": "FMCG",
+            "slug": "fmcg"
+        },
+        {
+            "sect_code": "00000028",
+            "sect_name": "Gas Distribution",
+            "slug": "gas-distribution"
+        },
+        {
+            "sect_code": "00000029",
+            "sect_name": "Glass & Glass Products",
+            "slug": "glass-glass-products"
+        },
+        {
+            "sect_code": "00000030",
+            "sect_name": "Healthcare",
+            "slug": "healthcare"
+        },
+        {
+            "sect_code": "00000031",
+            "sect_name": "Hotels & Restaurants",
+            "slug": "hotels-restaurants"
+        },
+        {
+            "sect_code": "00000032",
+            "sect_name": "Infrastructure Developers & Operators",
+            "slug": "infrastructure-developers-operators"
+        },
+        {
+            "sect_code": "00000033",
+            "sect_name": "IT - Hardware",
+            "slug": "it-hardware"
+        },
+        {
+            "sect_code": "00000034",
+            "sect_name": "IT - Software",
+            "slug": "it-software"
+        },
+        {
+            "sect_code": "00000035",
+            "sect_name": "Leather",
+            "slug": "leather"
+        },
+        {
+            "sect_code": "00000036",
+            "sect_name": "Logistics",
+            "slug": "logistics"
+        },
+        {
+            "sect_code": "00000037",
+            "sect_name": "Media - Print/Television/Radio",
+            "slug": "media-print-television-radio"
+        },
+        {
+            "sect_code": "00000038",
+            "sect_name": "Mining & Mineral products",
+            "slug": "mining-mineral-products"
+        },
+        {
+            "sect_code": "00000039",
+            "sect_name": "Miscellaneous",
+            "slug": "miscellaneous"
+        },
+        {
+            "sect_code": "00000040",
+            "sect_name": "Non Ferrous Metals",
+            "slug": "non-ferrous-metals"
+        },
+        {
+            "sect_code": "00000041",
+            "sect_name": "Oil Drill/Allied",
+            "slug": "oil-drill-allied"
+        },
+        {
+            "sect_code": "00000042",
+            "sect_name": "Packaging",
+            "slug": "packaging"
+        },
+        {
+            "sect_code": "00000043",
+            "sect_name": "Paints/Varnish",
+            "slug": "paints-varnish"
+        },
+        {
+            "sect_code": "00000044",
+            "sect_name": "Paper",
+            "slug": "paper"
+        },
+        {
+            "sect_code": "00000045",
+            "sect_name": "Petrochemicals",
+            "slug": "petrochemicals"
+        },
+        {
+            "sect_code": "00000046",
+            "sect_name": "Pharmaceuticals",
+            "slug": "pharmaceuticals"
+        },
+        {
+            "sect_code": "00000047",
+            "sect_name": "Plantation & Plantation Products",
+            "slug": "plantation-plantation-products"
+        },
+        {
+            "sect_code": "00000048",
+            "sect_name": "Plastic products",
+            "slug": "plastic-products"
+        },
+        {
+            "sect_code": "00000049",
+            "sect_name": "Power Generation & Distribution",
+            "slug": "power-generation-distribution"
+        },
+        {
+            "sect_code": "00000050",
+            "sect_name": "Readymade Garments/ Apparells",
+            "slug": "readymade-garments-apparells"
+        },
+        {
+            "sect_code": "00000051",
+            "sect_name": "Realty",
+            "slug": "realty"
+        },
+        {
+            "sect_code": "00000052",
+            "sect_name": "Refineries",
+            "slug": "refineries"
+        },
+        {
+            "sect_code": "00000053",
+            "sect_name": "Refractories",
+            "slug": "refractories"
+        },
+        {
+            "sect_code": "00000054",
+            "sect_name": "Retail",
+            "slug": "retail"
+        },
+        {
+            "sect_code": "00000055",
+            "sect_name": "Ship Building",
+            "slug": "ship-building"
+        },
+        {
+            "sect_code": "00000056",
+            "sect_name": "Shipping",
+            "slug": "shipping"
+        },
+        {
+            "sect_code": "00000057",
+            "sect_name": "Steel",
+            "slug": "steel"
+        },
+        {
+            "sect_code": "00000058",
+            "sect_name": "Stock/ Commodity Brokers",
+            "slug": "stock-commodity-brokers"
+        },
+        {
+            "sect_code": "00000059",
+            "sect_name": "Sugar",
+            "slug": "sugar"
+        },
+        {
+            "sect_code": "00000060",
+            "sect_name": "Telecomm Equipment & Infra Services",
+            "slug": "telecomm-equipment-infra-services"
+        },
+        {
+            "sect_code": "00000061",
+            "sect_name": "Telecomm-Service",
+            "slug": "telecomm-service"
+        },
+        {
+            "sect_code": "00000062",
+            "sect_name": "Textiles",
+            "slug": "textiles"
+        },
+        {
+            "sect_code": "00000063",
+            "sect_name": "Tobacco Products",
+            "slug": "tobacco-products"
+        },
+        {
+            "sect_code": "00000064",
+            "sect_name": "Trading",
+            "slug": "trading"
+        },
+        {
+            "sect_code": "00000065",
+            "sect_name": "Tyres",
+            "slug": "tyres"
+        },
+        {
+            "sect_code": "00000066",
+            "sect_name": "Bearings",
+            "slug": "bearings"
+        },
+        {
+            "sect_code": "00000067",
+            "sect_name": "Insurance",
+            "slug": "insurance"
+        },
+        {
+            "sect_code": "00000068",
+            "sect_name": "Telecom-Handsets/Mobile",
+            "slug": "telecom-handsets-mobile"
+        },
+        {
+            "sect_code": "00000069",
+            "sect_name": "ETF",
+            "slug": "etf"
+        },
+        {
+            "sect_code": "00000071",
+            "sect_name": "Ferro Alloys",
+            "slug": "ferro-alloys"
+        },
+        {
+            "sect_code": "00000072",
+            "sect_name": "Engineering",
+            "slug": "engineering"
+        },
+        {
+            "sect_code": "00000073",
+            "sect_name": "Education",
+            "slug": "education"
+        },
+        {
+            "sect_code": "00000074",
+            "sect_name": "Printing & Stationery",
+            "slug": "printing-stationery"
+        },
+        {
+            "sect_code": "00000076",
+            "sect_name": "Electronics",
+            "slug": "electronics"
+        },
+        {
+            "sect_code": "00000077",
+            "sect_name": "Railways",
+            "slug": "railways"
+        },
+        {
+            "sect_code": "00000079",
+            "sect_name": "Power Infrastructure",
+            "slug": "power-infrastructure"
+        },
+        {
+            "sect_code": "00000080",
+            "sect_name": "E-Commerce/App based Aggregator",
+            "slug": "e-commerce-app-based-aggregator"
+        },
+        {
+            "sect_code": "00000081",
+            "sect_name": "Real Estate Investment Trusts",
+            "slug": "real-estate-investment-trusts"
+        },
+        {
+            "sect_code": "00000082",
+            "sect_name": "Infrastructure Investment Trusts",
+            "slug": "infrastructure-investment-trusts"
+        },
+        {
+            "sect_code": "00000083",
+            "sect_name": "Marine Port & Services",
+            "slug": "marine-port-services"
+        },
+        {
+            "sect_code": "00000084",
+            "sect_name": "Quick Service Restaurant",
+            "slug": "quick-service-restaurant"
+        },
+        {
+            "sect_code": "00000085",
+            "sect_name": "Aerospace & Defence",
+            "slug": "aerospace-defence"
+        },
+        {
+            "sect_code": "00000086",
+            "sect_name": "Plywood Boards/Laminates",
+            "slug": "plywood-boards-laminates"
+        }
+    ]
+}

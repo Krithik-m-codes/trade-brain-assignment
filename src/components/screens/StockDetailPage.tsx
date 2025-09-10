@@ -1,53 +1,22 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { fetchStockPrices } from '@/services/stock';
+import React, { useState } from 'react';
 import StockGraph from '@/components/app/stock/StockGraph';
-import { useParams } from 'next/navigation';
+import { ISStockPrice } from '@/types/stock';
 
+interface StockDetailPageProps {
+    symbol: string;
+    companyName: string | null;
+    initialPrices: ISStockPrice[] | null;
+}
 
-export default function StockDetailPage() {
-    const { symbol } = useParams();
-    const [prices, setPrices] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+export default function StockDetailPage({ symbol, companyName, initialPrices }: StockDetailPageProps) {
+    const [prices] = useState(initialPrices);
+    const [error] = useState<string | null>(initialPrices ? null : "Failed to load stock data");
 
     // add stores to favorite stocks in localstorage
     const addToFavorites = (symbol: string) => {
         localStorage.setItem('favoriteStocks', JSON.stringify([...JSON.parse(localStorage.getItem('favoriteStocks') || '[]'), symbol]));
     };
-
-    useEffect(() => {
-        const getPrices = async () => {
-            try {
-                setLoading(true);
-                const fetchedPrices = await fetchStockPrices({ stock: String(symbol) });
-                if (!fetchedPrices) {
-                    setError("Stock not found.");
-                } else {
-                    setPrices(fetchedPrices);
-                }
-            } catch (e) {
-                setError("Failed to fetch stock prices." + (e instanceof Error ? `: ${e.message}` : ""));
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        if (symbol) {
-            getPrices();
-        }
-    }, [symbol]);
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-                    <p className="mt-4 text-gray-600">Loading stock data...</p>
-                </div>
-            </div>
-        );
-    }
 
     if (error) {
         return (
@@ -83,20 +52,28 @@ export default function StockDetailPage() {
         <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 w-full py-6'>
             <div className="container mx-auto px-4 py-8 min-h-screen">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                        {String(symbol).toUpperCase()} Stock Analysis
-                    </h1>
-                    <p className="text-gray-600">
-                        Real-time stock price data and analytics
-                    </p>
-                    <button
-                        onClick={() => addToFavorites(String(symbol).toUpperCase())}
-                        className="mt-4 bg-yellow-400 text-white px-4 py-2 rounded hover:bg-yellow-500"
-                    >
-                        Add to Favorites
-                    </button>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h1 className="text-3xl font-bold text-gray-800 mb-2">
+                                {companyName} Stock Analysis
+                            </h1>
+                            {companyName && (
+                                <h2 className="text-xl text-gray-600 mb-2">{symbol}</h2>
+                            )}
+                            <p className="text-gray-600">
+                                Real-time stock price data and analytics
+                            </p>
+                        </div>
+                        <div className="mt-4 md:mt-0 flex space-x-4">
+                            <button
+                                onClick={() => addToFavorites(symbol.toUpperCase())}
+                                className="bg-yellow-400 hover:bg-yellow-500 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-2"
+                            >
+                                <span>Add to Favorites</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
                 <div className="mb-8">
                     <StockGraph data={prices} />
                 </div>

@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { fetchStockTicker } from "@/services/stock";
 import { IStockTickerResponse } from "@/types/stock";
 import Marquee from "react-fast-marquee";
-
+import { useRouter } from "next/navigation";
+// import { useStockContext } from "../context/stockContext";
 
 const formatNumber = (num: number) => {
     return num?.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -12,12 +13,15 @@ const formatNumber = (num: number) => {
 
 const StockTicker: React.FC = () => {
     const [tickers, setTickers] = useState<IStockTickerResponse["volume_movers"] | null>(null);
+    const router = useRouter();
+    // const [stocksInTicker, setStocksInTicker] = useStockContext();
 
     useEffect(() => {
         const fetchData = async () => {
             const data = await fetchStockTicker();
             console.log("Fetched stock ticker data:", data);
             setTickers(data.volume_movers);
+            // setStocksInTicker(data.volume_movers);
         };
 
         fetchData();
@@ -27,6 +31,11 @@ const StockTicker: React.FC = () => {
         if (percent > 0) return 'text-green-500';
         if (percent < 0) return 'text-red-500';
         return 'text-gray-500';
+
+    }
+
+    const onSymbolClick = (symbol: string) => {
+        router.push(`/stock/${symbol}`);
     }
 
     return (
@@ -40,7 +49,7 @@ const StockTicker: React.FC = () => {
             ))} */}
             <Marquee speed={50} gradient={false} pauseOnHover={true} className="">
                 {tickers && tickers.map((ticker) => (
-                    <div key={ticker.symbol} className="flex flex-row items-center p-2 rounded-md gap-5 mx-4">
+                    <div key={ticker.symbol} className="flex flex-row items-center p-2 rounded-md gap-5 mx-4 hover:cursor-pointer" onClick={() => { onSymbolClick(ticker.symbol) }}>
                         <div className='flex items-center'>
                             <h3>{ticker.symbol}</h3>
                             <p> {ticker.prev_close}</p>
