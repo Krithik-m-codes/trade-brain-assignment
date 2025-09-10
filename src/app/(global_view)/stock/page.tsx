@@ -14,7 +14,7 @@ export default function StockDetailPage() {
                 <h1 className='text-3xl font-bold mb-4'>Stock Detail Page</h1>
                 <ul>
                     {sectorNames.map((names) => (
-                        <li>{names}</li>
+                        <li key={names} className=''>{names}</li>
                     ))
                     }
                 </ul>
